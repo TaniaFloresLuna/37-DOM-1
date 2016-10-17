@@ -1,3 +1,44 @@
+function cambiarLenguaje (idioma){
+
+var encabezado = document.getElementById("form-signin-heading");
+var eMail = document.getElementById("inputEmail");
+var passWord = document.getElementById("inputPassword");
+var checkBox = document.getElementById("remember");
+var butTon = document.getElementById("sub");
+
+
+	eMail.setAttribute("placeholder", "Correo electronico");
+	var mail = document.getElementById("inputEmail");
+	passWord.setAttribute("placeholder", "Contraseña");
+	var contra = document.getElementById("inputPassword");
+
+
+
+	if (idioma == "es") {
+		encabezado.innerHTML = "Por favor inicia sesión";
+		eMail.innerHTML = "Correo electronico";
+		passWord.innerHTML = "Contraseña";
+		checkBox.innerHTML = "Recordar datos";
+		butTon.innerHTML = "Iniciar sesión";
+	}
+
+
+} cambiarLenguaje("es");
+
+	var btnEs = document.getElementById("btnEsp");
+	btnEs.onkeypress = function(){
+		cambiarLenguaje("es");
+	};
+	var btnEng = document.getElementById("btnEng");
+	btnEng.onkeypress = function(){
+		cambiarLenguaje("Eng");
+	};
+
+
+
+
+/*
+
 function cambiarIdioma (idioma){
 
 var elUser = document.getElementById("inputEmail");
@@ -34,3 +75,4 @@ var elRemember = document.getElementById("remember");
 	btnEng.onclick = function(){
 		cambiarIdioma("Eng");
 	};
+*/
